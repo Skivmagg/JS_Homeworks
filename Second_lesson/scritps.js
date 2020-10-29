@@ -184,5 +184,36 @@
 // }
 
 // - Відтворити роботу годинника, відрахувавши 2 хвилини (2 цикли! 1й - хвилини, 2й - секунди)
+//
+// for (let hv = 0; hv<=2; hv++){
+//     console.log('***',hv);
+//     for (let sec=1; sec <=60; sec++){
+//         console.log(sec);
+//     };
+// }
+
+// - Відтворити роботу годинника, відрахувавши  2 години 20 хвилини (3 цикли! 1й - години, 2й - хвилини, 3й - секунди)
+
+for (let god=0; god<=2; god++){
+    console.log(god, '-----------hours');
+    if (god ===2){
+        for (let hv = 0; hv<=19; hv++){
+            console.log(hv,'----minutes');
+            for (let sec=1; sec <=60; sec++){
+                console.log(sec);
+            }
+        }
+    } else {
+        for (let hv = 0; hv<=59; hv++){
+            console.log(hv,'----minutes');
+            for (let sec=1; sec <=60; sec++){
+                console.log(sec);
+            }
+        }
+    }
+
+
+}
+
 
 
