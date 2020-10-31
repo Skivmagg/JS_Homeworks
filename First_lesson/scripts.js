@@ -337,15 +337,93 @@
 
 // 12.  С помощью окна ввода, вызываемого методом prompt, пользователь может ввести данные, которые будут использоваться далее, повторите код ниже
 
-let str = prompt("Enter something", "ho-ho")
-console.log(str);
+// let name = prompt("Enter name");
+// let secondName = prompt("Enter second name");
+// let age = +prompt("Enter second number");
+//
+// alert('Доброго вечера ' + name + secondName + ' мои поздравления что вам ' + age);
+
+// 1. Три різних числа вводяться через prompt().
+//     За допомоги if else вивести іх в порядку зростання. (відсортувати по зростанню)
+
+// let x = prompt("Enter first number");
+// let y = prompt("Enter second number");
+// let z = prompt("Enter third number");
+//
+// if (x > y && x > z && y > z){
+//     console.log(x, y , z)
+// } else if (x < y && x < z && z > y) {
+//         console.log(z, y , x)
+//     }
+// else if (x < y && x < z && y > z) {
+//     console.log(y, z , x)
+// }
+//
+//
+//          else {
+//         console.log ('wtf')
+//     }
+
+
+// 2.
+// Все параматры получаем с клавиатуры!!!!
+//     Имитируем поведение пешехода на перекстке.
+//     Если светофор зеленый - вывести "иди".
+//     Если светофор желтый - вывести "подожди".
+//     Если светофор красный - вывести "стой".
+//     Если светофор в аварийном режиме вывести "делай что хочешь"!
+
+
+// let colir = prompt('Kolir svitlofora')
+//
+// if (colir == 'green') {
+//     document.write('GO')
+// } else if (colir == 'yellow') {
+//     document.write('Wait')
+// } else if (colir == 'red') {
+//     document.write('stop')
+// } else {
+//     document.write('делай что хочешь')
+// }
+
+// 3
+// Все параметры получаем с клавиатуры!!!!(prompt , confirm)
+// Создать переменную isRoadClear которая характеризирует наличие на дороге машин.
+//     Улучшаем предыдущее задание.
+//     Если светофор зеленый и машин нет - вывести "иди".
+//     Если светофор зеленый и машины есть  - вывести подожди пока нарушители проедут".
+// Если светофор желтый и машины есть - вывести "жди".
+//     Если светофор желтый и машин нет - вывести "все рано жди".
+//     Если светофор красный и машин нет- вывести "стой все рано".
+//     Если светофор красный - и машины есть вывести "стой и жди".
+//     Если светофор в аварийном режиме вывести "делай что хочешь"!
 
 
 
+let colir = prompt('Kolir svitlofora')
+let free = confirm('Doroga clear?')
+if (colir == 'green' && free == true) {
+    document.write('GO')
+} else if (colir == 'green' && free == false) {
+    document.write('подожди пока нарушители проедут')
+}
 
+else if (colir == 'yellow' && free == false) {
+    document.write('wait')
+}
+else if (colir == 'yellow' && free == true) {
+    document.write('wait anywaay')
+}
+else if (colir == 'red' && free == true) {
+    document.write('stop anywaay')
+}
+else if (colir == 'red' && free == false) {
+    document.write('stop and wait')
+}
 
-
-
+else {
+    document.write('делай что хочешь')
+}
 
 
 
