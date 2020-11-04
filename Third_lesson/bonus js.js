@@ -292,7 +292,7 @@
 //     status: true,
 //     address: {city: 'Cairo', country: 'Egypt', street: 'Seashore', houseNumber: 45}
 // }];
-
+//
 // - З масиву users за допомогою циклу витягнути адреси користувачів і записати (скопіювати) їх в інший порожній масив.
 // let usersAdress = [];
 //
@@ -423,15 +423,31 @@
 // document.body.appendChild(table)
 const n = prompt('Скільки рядків?')
 const m = prompt('Скільки Стовпчиків?')
+
 let table = document.createElement('table')
+
 for (let i = 0; i < n; i++) {
     let tr = document.createElement('tr')
     tr.innerText = '1'
+
     for (let j = 0; j < m; j++) {
         let td = document.createElement('td')
         tr.appendChild(td)
         td.innerText = '1'
     }
+
     table.appendChild(tr)
+
 }
-document.body.appendChild(table)
+
+document.body.appendChild(table);
+let z = document.getElementsByTagName('td');
+for (const nElement of z) {
+    nElement.style.border = '1px solid black'
+}
+
+
+
+// let block = document.createElement('div');
+// block.classList.add('block');
+// document.body.appendChild(block);
