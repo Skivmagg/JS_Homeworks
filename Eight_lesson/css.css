@@ -1,0 +1,28 @@
+.list_menu{
+    display: block;
+    font-size: 18px;
+    color: red;
+}
+
+.list_menu_hide{
+    display: none;
+}
+
+.p{
+    display: block;
+    margin: 20px;
+}
+.p_hide{
+    display: none;
+}
+.hidden_menu{
+    display: inline-block;
+    background-color: red;
+
+    width: 400px;
+    height: 600px;
+    position: absolute;
+left: 800px;
+
+
+}
