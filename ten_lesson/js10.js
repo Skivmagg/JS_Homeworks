@@ -322,6 +322,102 @@
 
 //async await
 
+// function dayOrder(waterStatus) {
+//
+//     return new Promise((resolve, reject) => {
+//         console.log('Прокидаємось та йдемо в ванну кімнату');
+//
+//         setTimeout(() => {
+//
+//             if (!waterStatus) {
+//                 reject('Води немає, день насмарку');
+//                 return;
+//             }
+//             resolve('Ми помились та почистили зуби');
+//
+//         }, 1000)
+//     })
+// }
+//
+// function goEat(eatStatus) {
+//     console.log('Іду готувати їсти');
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (!eatStatus) {
+//                 reject('Їжі немає, голодним всі плани не виконаєш');
+//                 return;
+//             }
+//             resolve('Приготував купу їжі, поснідав');
+//         }, 2000)
+//
+//     })
+// }
+//
+// function goWork(fuel) {
+//     console.log('Пішли до машини їхати на роботу');
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (fuel < 3) {
+//                 reject('Бензину немає, нікуда не доїдеш');
+//                 return;
+//             }
+//             resolve('Бензин є, поїхали на роботу працювати');
+//         }, 1500)
+//
+//     })
+// }
+//
+// function dinner() {
+//     return new Promise(resolve => {
+//         setTimeout(() => {
+//             resolve('Пішли на обід');
+//         }, 1000)
+//     })
+// }
+//
+// function goHome(fuel) {
+//     console.log('Збираємось додому')
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (fuel < 3) {
+//                 reject('Немає бензину, додому не доїдемо');
+//                 return;
+//             }
+//             resolve('Бензин є, ми поїхали додому та успішно приїхали')
+//         }, 2000)
+//
+//     })
+//
+// }
+//
+// function netflixChill(internetStatus) {
+//     console.log('Прийшли додому, та запускаємо нетфлікс дивитись серіал');
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (!internetStatus) {
+//                 reject('Немає інтернету, серіал не подивитись');
+//                 return;
+//             }
+//             resolve('Круто дивимось 3 серії серіалу та кайфуємо');
+//         }, 3000)
+//     })
+//
+// }
+//
+// function goSleep(sleepTime) {
+//     console.log('Лягаэмо спати, надіємось гарно поспимо');
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (sleepTime < 4) {
+//                 reject('Часу для сну дуже мало, завтра не встанемо, фіаско');
+//                 return;
+//             }
+//             resolve('Часу для сну достатньо, засинаємо та спимо');
+//         }, 1000)
+//     })
+//
+// }
+//
 // async function day() {
 //     try {
 //         const dayorder = await dayOrder(true);
@@ -360,25 +456,24 @@
 // l (затримка 0.7)
 // о (затримка 1)
 
-// let text = document.getElementById('text');
-//
-// function lett (letter){
-//     return new Promise(resolve => {
-//         setTimeout(()=>{
-//        resolve(text.innerText +=`${letter}`)
-//         },Math.random()*1000)
-//     })
-// }
-//
-// async function write (string){
-//     let z = string.split('');
-//     console.log(z);
-//     for (let letter of z) {
-//        await lett(letter);
-//     }
-// }
-//
-// write('Hello World')
+let text = document.getElementById('text');
+
+function lett (letter){
+    return new Promise(resolve => {
+        setTimeout(()=>{
+       resolve(text.innerText +=`${letter}`)
+        },Math.random()*1000)
+    })
+}
+
+async function write (string){
+    let z = string.split('');
+       for (let letter of z) {
+       await lett(letter);
+    }
+}
+
+write('Hello World')
 
 
 
