@@ -310,4 +310,8 @@ function vivesti (array){
     }
 
 
-
+let t = [5,4,3,2]
+console.log(...t);
+navigator.geolocation.getCurrentPosition(position => {
+    console.log(position);
+})
